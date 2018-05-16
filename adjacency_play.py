@@ -87,9 +87,9 @@ def apply_labels(M, label_dict):
     return out
 
 
-ex1L = label_propagation(detecting_islands)
-
-pprint(detecting_islands)
-pprint(ex1L)
-
-pprint(apply_labels(detecting_islands, ex1L))
+# ex1L = label_propagation(detecting_islands)
+#
+# pprint(detecting_islands)
+# pprint(ex1L)
+#
+# pprint(apply_labels(detecting_islands, ex1L))
