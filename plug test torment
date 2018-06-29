@@ -1,0 +1,48 @@
+#!/bin/sh
+
+source /usr/local/lib/soma/network
+
+# Ethernet initialisation, depends on nothing
+echo "Initialising Ethernet..."
+
+IP_CMD=/sbin/ip
+
+# Configure hardware switch (not in qemu)
+if [ -n "$SWCONFIG" ]; then
+  $SWCONFIG dev $DEV_SWITCH set reset 1
+  $SWCONFIG dev $DEV_SWITCH set enable_vlan 1
+  # ports 1-4 are the yellow (LAN1-LAN4) ports and port 6 is eth1
+  # Use port 4 (LAN4) as debug port, 6t means debug traffic will be vlan tagged when reaching eth1
+  $SWCONFIG dev $DEV_SWITCH vlan 1 set ports '2 3 6'
+  $SWCONFIG dev $DEV_SWITCH vlan 99 set ports '4 6t'
+  # port 5 is the blue (WAN) port and port 0 is eth0
+  $SWCONFIG dev $DEV_SWITCH vlan 2 set ports '0 5'
+  $SWCONFIG dev $DEV_SWITCH set apply 1
+else
+  echo "not configuring Ethernet switch"
+fi
+
+# set WAN MAC address
+set_mac_addr $WANIF $WAN_MAC_ADDR
+
+# Enable LAN ports, add to bridge.
+#
+# If, for whatever reason, this scripts gets re-executed after LANIF
+# has been added to the bridge, don't do any of this as it WILL screw
+# up connectivity and make your life misery.
+if ! $IP_CMD addr show $LANIF | grep -q master; then
+    $IP_CMD link add $BRIF type bridge
+    $IP_CMD link set $LANIF up master $BRIF
+    $IP_CMD link set $BRIF up
+fi
+
+# Add static ip to debug interface
+$IP_CMD link add link $LANIF name $DEBUGIF type vlan id 99
+$IP_CMD link set $DEBUGIF up
+$IP_CMD addr add $STATIC_IP dev $DEBUGIF
+
+# eth0 needs to be set to multicast mode to enable ipv6. ipv6 is not required
+# for deployments but is required for lab testing. We may be able to remove
+# this requirement once it is it addressed in kernel/driver.
+# see https://forum.lede-project.org/t/ipv6-works-only-with-wan-in-promiscuous-mode/490/6
+ip link set dev $WANIF allmulticast on
