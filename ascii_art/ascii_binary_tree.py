@@ -90,16 +90,10 @@ class DrawTree(object):
 
         next_available_area = available_area // 2
         text = tree_node.v
-        while len(text) < self.MLS -1:
+        while len(text) < self.MLS - 1:
             text = '_' + text + '_'
         AC.add_word_at(text, x, y)
         next_y = y + self.RG
-
-        if next_available_area < (self.mLG + self.MLS) * 2:
-            print(AC)
-
-        assert next_available_area >= (self.mLG + self.MLS) * 2, f"{next_available_area} >!= {(self.mLG + self.MLS) * 2}"
-
         if tree_node.left is not None:
 
             left_x = x + next_available_area // 2
@@ -114,7 +108,9 @@ class DrawTree(object):
 
     def draw_tree(self, root):
         depth = get_tree_depth(root)
-        width = ((self.MLS + self.mLG) * depth + 5) * 3
+
+
+        width = (self.MLS + 3 * self.mLG) * 2 ** depth
         height = depth * 3 + 5
         AC = AsciiCanvas(width, height, '.')
 
@@ -125,7 +121,7 @@ class DrawTree(object):
 
 
 if __name__ == "__main__":
-    ex_tree = example_tree()
+    ex_tree = example_tree(10)
     get_tree_depth(ex_tree)
 
     print(ex_tree)
