@@ -1,0 +1,27 @@
+
+# ssh onto devices
+
+#run
+
+ip addr add dev eth0 192.168.7.5
+
+iperf -s -i eth0
+
+
+# Create the tmp1 interface via the script
+
+# Kill magma so can kill bridge
+#system-magma.slice
+
+
+ip link set bridge0 down
+
+# Okay
+
+
+https://stackoverflow.com/questions/8538081/how-to-avoid-routing-through-local-stack-in-linux
+# An answer that does not network
+ip rule add from all lookup local # add one more local table lookup rule with high pref
+ip rule del pref 0 # delete default local table lookup rule
+ip rout add ${ip3} via ${ip2} src ${ip1} table 100 # add correct route to some table
+ip rule add from all lookup 100 pref 1000 # add rule to lookup new table before local table
