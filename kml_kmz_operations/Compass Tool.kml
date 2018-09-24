@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<ScreenOverlay>
+	<name>Compass Tool</name>
+	<open>1</open>
+	<description><![CDATA[<center>
+<a href="http://s1243.photobucket.com/albums/gg546/ge-washi/Short%20Files/?action=view&amp;current=CompassTool2.jpg" target="_blank"><img src="http://i1243.photobucket.com/albums/gg546/ge-washi/Short%20Files/CompassTool2.jpg" width=400 border="4" alt="Photobucket"></a>
+</center>
+<br><br>
+This tool can be used to obtain a fairly accurate compass bearing from one location to another.  To use:
+<ol>
+<li>Click <b>N</b> on the navigation tool to orient the Google Earth view to north, and return the view to straight down.  (Unless hot keys have been modified, pressing the <b>R</b> on the keyboard will accomplish both.)</li>
+<br><br>
+<li>Go to close-in view of the point of origin and activate the <b>Ruler</b> tool.</li>
+<br><br>
+<li>Extend the <b>Ruler</b> line to the second point.</li>
+<br><br>
+<li>If necessary, zoom in or out until the <b>Ruler</b> line crosses the compass scale.</li>
+</ol>
+<br>]]></description>
+	<drawOrder>99</drawOrder>
+	<Icon>
+		<href>http://i1243.photobucket.com/albums/gg546/ge-washi/Icons/CompassTool1m.png</href>
+	</Icon>
+	<overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+	<screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+	<rotationXY x="0.5" y="1" xunits="fraction" yunits="fraction"/>
+	<size x="-1" y="-1" xunits="pixels" yunits="pixels"/>
+</ScreenOverlay>
+</kml>

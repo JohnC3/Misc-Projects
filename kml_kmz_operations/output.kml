@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Moline IL - JK.kmz</name>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>Temporary Places</name>
+		<open>1</open>
+		<Placemark>
+			<name>41.134712,-90.808701</name>
+			<open>1</open>
+			<Point>
+				<coordinates>-90.808701,41.134712,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Area to model</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-90.80868599781709,41.12254978401856,0 -90.66742026844899,41.20131491884497,0 -90.76091971242306,41.25196182355194,0 -90.82710926960806,41.13407556629891,0 -90.80868599781709,41.12254978401856,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+
+    <Placemark>
+    <name>(3->0)129.70561669487034 - (0->1)53.429646532619046 = 283.72402983774873</name>
+    <Point>
+        <coordinates>-90.8086859978171,41.12254978401856,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>(0)</name>
+    <Point>
+        <coordinates>-90.8086859978171,41.12254978401856,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>(0->1)53.429646532619046 - (1->2)-54.2071243669985 = 252.36322910038245</name>
+    <Point>
+        <coordinates>-90.66742026844899,41.20131491884497,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>(1)</name>
+    <Point>
+        <coordinates>-90.66742026844899,41.20131491884497,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>(1->2)-54.2071243669985 - (2->3)-157.07398427956394 = 257.1331400874345</name>
+    <Point>
+        <coordinates>-90.76091971242306,41.25196182355194,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>(2)</name>
+    <Point>
+        <coordinates>-90.76091971242306,41.25196182355194,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>(2->3)-157.07398427956394 - (3->0)129.70561669487034 = 286.7796009744343</name>
+    <Point>
+        <coordinates>-90.82710926960806,41.13407556629891,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>(3)</name>
+    <Point>
+        <coordinates>-90.82710926960806,41.13407556629891,0</coordinates>
+    </Point>
+    </Placemark>
+    </Document>
+</kml>

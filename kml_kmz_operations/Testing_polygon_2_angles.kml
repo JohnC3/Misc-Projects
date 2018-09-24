@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Testing_polygon_2.kmz</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Placemark>
+		<name>Testing polygon</name>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-90.99667699740695,41.33458924555606,0 -90.99909399812371,41.31656151589291,0 -90.99771533632344,41.28076047157812,0 -90.95850238719612,41.25426896590611,0 -90.86682624723127,41.26910911346493,0 -90.8629839161797,41.35362221579219,0 -90.97871466935273,41.3435100205241,0 -90.99667699740695,41.33458924555606,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+
+    <Placemark>
+    <name>129.239</name>
+    <Point>
+        <coordinates>-90.9966769974,41.3345892456,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>172.594</name>
+    <Point>
+        <coordinates>-90.9990939981,41.3165615159,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>133.593</name>
+    <Point>
+        <coordinates>-90.9977153363,41.2807604716,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>125.855</name>
+    <Point>
+        <coordinates>-90.9585023872,41.2542689659,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>104.077</name>
+    <Point>
+        <coordinates>-90.8668262472,41.2691091135,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>81.442</name>
+    <Point>
+        <coordinates>-90.8629839162,41.3536222158,0</coordinates>
+    </Point>
+    </Placemark>
+    
+    <Placemark>
+    <name>153.200</name>
+    <Point>
+        <coordinates>-90.9787146694,41.3435100205,0</coordinates>
+    </Point>
+    </Placemark>
+    </Document>
+</kml>
