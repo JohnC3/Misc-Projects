@@ -20,6 +20,17 @@ class TestAsciiCanvas(unittest.TestCase):
         expected = "....\ntest\n"
         self.assertEqual(res, expected)
 
+    def test_straight_line_symbol(self):
+
+        self.assertEqual(self.tc.straight_line_symbol(1, 1, 1, 5), '|')
+
+        self.assertEqual(self.tc.straight_line_symbol(1, 2, 5, 2), '-')
+
+        self.assertEqual(self.tc.straight_line_symbol(1, 1, 2, 2), '\\')
+        self.assertEqual(self.tc.straight_line_symbol(2, 2, 1, 1), '\\')
+        self.assertEqual(self.tc.straight_line_symbol(1, 2, 2, 1), '/')
+        self.assertEqual(self.tc.straight_line_symbol(2, 1, 1, 2), '/')
+
 
 if __name__ == "__main__":
 
