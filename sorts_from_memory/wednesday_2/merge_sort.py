@@ -40,6 +40,10 @@ def merge_sort(arr):
 
 class TestMergeSort(unittest.TestCase):
 
+    def test_empty(self):
+
+        self.assertEqual([], merge_sort([]))
+
     def test_merge_sort_1(self):
 
         l1 = [-60, 93, 51, 81, -50, 11, -29, 4, -87, -78, 85, 52, -26, 20, -94, -40, 63, 48, -39, -32]

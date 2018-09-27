@@ -22,6 +22,7 @@ def partition(alist, left, right):
         alist[right_I] = temp
     return left_I
 
+
 def _do_quick_sort(alist, left, right):
     if left < right:
         partition_index = partition(alist, left, right)
@@ -31,6 +32,7 @@ def _do_quick_sort(alist, left, right):
 
     return alist
 
+
 def quick_sort(alist):
 
     left = 0
@@ -39,8 +41,11 @@ def quick_sort(alist):
     return _do_quick_sort(alist, left, right)
 
 
-
 class TestQuickSort(unittest.TestCase):
+
+    def test_empty(self):
+
+        self.assertEqual([], quick_sort([]))
 
     def test_1(self):
         l1 = [-60, 93, 51, 81, -50, 11, -29, 4, -87, -78, 85, 52, -26, 20, -94,
