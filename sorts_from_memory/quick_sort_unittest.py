@@ -8,6 +8,10 @@ def quick_sort(alist):
 
 class TestQuickSort(unittest.TestCase):
 
+    def test_empty(self):
+
+        self.assertEqual([], quick_sort([]))
+
     def test_1(self):
         l1 = [-60, 93, 51, 81, -50, 11, -29, 4, -87, -78, 85, 52, -26, 20, -94,
               -40, 63, 48, -39, -32]
